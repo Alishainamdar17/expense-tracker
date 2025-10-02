@@ -1,0 +1,129 @@
+/* Simple CSS for ExpenseTracker */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.expense-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px 0 40px;
+  background: transparent;
+  border-bottom: none;
+  margin-bottom: 32px;
+}
+
+.expense-summary {
+  display: flex;
+  gap: 32px;
+  margin: 0 40px 40px 40px;
+  flex-wrap: wrap;
+}
+
+.expense-summary > div {
+  flex: 1 1 200px;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  min-width: 200px;
+  margin: 0 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.expense-form {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.expense-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.expense-form input,
+.expense-form select,
+.expense-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.expense-form button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .expense-header,
+  .expense-summary,
+  .expense-form,
+  .expense-table {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .expense-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 8px 16px 8px;
+  }
+  .expense-summary {
+    gap: 12px;
+    margin: 24px 8px 16px 8px;
+  }
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.expense-table th {
+  background: #f0f4f8;
+}
+
+.expense-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.expense-table .delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
